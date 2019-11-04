@@ -1,5 +1,8 @@
 import React from 'react';
+import SidebarComponent from './sidebar/sidebar';
+import EditorComponent from './editor/editor';
 import './App.css';
+
 
 const firebase = require('firebase');
 
@@ -37,7 +40,12 @@ class App extends React.Component {
   }
 
   render() {
-    return(<div>Hello World</div>);
+    return(
+      <div className="app-container">
+        <SidebarComponent></SidebarComponent>
+        <EditorComponent></EditorComponent>
+      </div>
+    );
   }
 
   //when app comp is loaded success in dom this will be called
@@ -48,6 +56,7 @@ class App extends React.Component {
       .collection('notes')
       //automatically called when notes is updated in fb
       .onSnapshot(serverUpdate => {
+        //for each doc, apply the map
         const notes = serverUpdate.docs.map(_doc => {
           const data = _doc.data();
           data['id'] =  _doc.id;
