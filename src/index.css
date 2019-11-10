@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@media(max-width: 768px){
+  .quill {
+    height: 100vh;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+  }
+  .app-container {
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .EditorComponent-titleInput-119 {
+    color: green;
+    border: none;
+    height: 50px;
+    padding: 5px;
+    padding-left: 5px;
+    font-size: 24px;
+    box-sizing: border-box;
+    padding-left: 50px;
+    background-color:#29487d;
+    width: 100%;
+  }
+}

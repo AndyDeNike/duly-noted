@@ -29,7 +29,8 @@ const styles = theme => ({
     },
     sidebarContainer: {
       marginTop: '0px',
-      width: '300px',
+      // width: '300px', default
+      width: '100%',
       height: '100%',
       boxSizing: 'border-box',
       float: 'left',

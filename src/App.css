@@ -27,20 +27,23 @@ html, body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  /* overflow: hidden; default */
 }
 #evernote-container {
   height: 100%;
   box-sizing: border-box;
 }
 .app-container {
-  height: 100vh;
+  /* height: 100vh; */  /*default*/
+  height: 100%;
   box-sizing: border-box;
 }
 .quill {
+  /* height: 100%; default */
   height: 100vh;
   box-sizing: border-box;
-  width: calc(100% - 300px);
+  /* width: calc(100% - 300px);  default */
+  width: 100%;
   float: left;
 }
 .ql-container {
@@ -60,3 +63,23 @@ html, body {
   top: 50px;
   left: calc(50% - 165px);
 }
+.center: {
+  text-align: center;
+}
+
+
+
+/* not effective */
+
+/* @media(max-width: 768px)
+  .quill {
+    height: 100vh;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+  }
+  .app-container {
+    height: 100%;
+    box-sizing: border-box;
+  }
+  */
