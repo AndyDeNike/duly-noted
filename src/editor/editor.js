@@ -4,6 +4,7 @@ import debounce from '../helpers';
 import BorderColorIcon from '@material-ui/icons/BorderColor';
 import { withStyles } from '@material-ui/core/styles';
 import styles from './styles';
+import '../App.css';
 
 class EditorComponent extends React.Component {
     constructor() {
@@ -39,7 +40,11 @@ class EditorComponent extends React.Component {
 
         return(
             <div className={classes.editorContainer}>
-                <BorderColorIcon className={classes.editIcon}></BorderColorIcon>
+                {/* <div>
+                    <BorderColorIcon className={classes.editIcon}></BorderColorIcon>
+                    <span className={classes.center}>Edit title and content of note below!</span>
+                </div> */}
+    
                 <input
                     className={classes.titleInput}
                     placeholder='Note title...'
